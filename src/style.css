@@ -36,3 +36,16 @@ a {
   text-decoration: none;
   color: var(--light);
 }
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1.8%;
+  background-color: var(--dark);
+  color: var(--light);
+}
