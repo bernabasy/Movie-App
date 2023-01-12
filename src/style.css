@@ -83,10 +83,6 @@ a {
   width: 100%;
 }
 
-.popup {
-  display: none;
-}
-
 footer {
   display: flex;
   align-items: center;
@@ -122,11 +118,6 @@ footer {
 .popup-summary {
   font-size: 1.6vh;
 }
-
-/* .form {
-  padding-bottom: 80px;
-  padding-inline: auto;
-} */
 
 form {
   display: flex;

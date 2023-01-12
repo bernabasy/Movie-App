@@ -1,7 +1,6 @@
 import getSeries from './baseUrl.js';
 
 const movieContainer = document.getElementById('home');
- 
 
 const displayMovies = async () => {
   const moviesList = await getSeries();
@@ -47,18 +46,16 @@ const displayMovies = async () => {
 
 // popup
 
- export const showPopups = async () => {
+const showPopups = async () => {
   await displayMovies();
   const moviesList = await getSeries();
   const popUp = document.querySelector('#pop');
   const btns = document.querySelectorAll('.comment-btn-container');
-  // console.log(btns);
   btns.forEach((btn, i) => {
     btn.addEventListener('click', () => {
       console.log(btn);
-      // document.querySelector('header').style.display = 'none';
+
       document.querySelector('section').style.display = 'none';
-      // document.querySelector('footer').style.display = 'none';
       popUp.style.display = 'block';
       const popupBg = document.createElement('div');
       popupBg.classList.add('popup-bg');
@@ -79,9 +76,7 @@ const displayMovies = async () => {
       const popupTitle = document.createElement('h2');
       popupTitle.classList.add('tittle-popup');
       popupTitle.innerHTML = 'movieTitle';
-      //   if (show.name === null) {
-      //     popupTitle.innerHTML = 'Lorem ipsum';
-      //   }
+
       popupTitleContainer.appendChild(popupTitle);
 
       const closeImg = document.createElement('h1');
@@ -109,9 +104,7 @@ const displayMovies = async () => {
       const popupSummary = document.createElement('p');
       popupSummary.classList.add('popup-summary');
       popupSummary.innerHTML = `Premiered: ${moviesList[i].summary}`;
-      //   if (/summary === null) {
-      //     popupSummary.innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
-      //   }
+
       popupInfo.appendChild(popupSummary);
 
       const popupMoreInfo = document.createElement('div');
@@ -185,6 +178,5 @@ const displayMovies = async () => {
     });
   });
 };
-
 
 export default showPopups;
