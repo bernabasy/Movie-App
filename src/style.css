@@ -95,3 +95,43 @@ footer {
   background-color: var(--dark);
   color: var(--light);
 }
+
+.popup {
+  padding-inline: 2%;
+  padding-top: 10px;
+}
+
+.tittle-popup {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  padding-inline: 5%;
+}
+
+.popup-img {
+  width: 100%;
+  height: auto;
+  padding-inline: 20%;
+}
+
+.genres {
+  padding: 20px;
+  color: #fc466b;
+}
+
+.popup-summary {
+  font-size: 1.6vh;
+}
+
+/* .form {
+  padding-bottom: 80px;
+  padding-inline: auto;
+} */
+
+form {
+  display: flex;
+  padding-bottom: 80px;
+  flex-direction: column;
+  width: 50%;
+  margin-inline: auto;
+}
