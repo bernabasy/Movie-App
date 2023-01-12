@@ -1,12 +1,24 @@
-import getSeries from './baseUrl.js';
+import { fetchSeries, fetchLikes } from './baseUrl.js';
 
 const movieContainer = document.getElementById('home');
 
+const likedID = async (liked, likedId) => {
+  for (let i = 0; i < liked.length; i += 1) {
+    if (likedId.toString() === liked[i].item_id) {
+      return liked[i].likes;
+    }
+  }
+
+  return 0;
+};
+
 const displayMovies = async () => {
-  const moviesList = await getSeries();
+  const moviesList = await fetchSeries();
+  const moviesLikes = await fetchLikes();
 
   moviesList.forEach(async (movieObj) => {
     const card = document.createElement('div');
+    const displayLikes = await likedID(moviesLikes, movieObj.id);
 
     card.classList.add('movie-card');
 
@@ -26,7 +38,7 @@ const displayMovies = async () => {
 
               <i class="fa-sharp fa-solid fa-heart"></i> 
 
-              <span></span> Likes 
+              <span></span>${displayLikes.toString()} Likes 
 
             </div> 
 
@@ -48,13 +60,11 @@ const displayMovies = async () => {
 
 const showPopups = async () => {
   await displayMovies();
-  const moviesList = await getSeries();
+  const moviesList = await fetchSeries();
   const popUp = document.querySelector('#pop');
   const btns = document.querySelectorAll('.comment-btn-container');
   btns.forEach((btn, i) => {
     btn.addEventListener('click', () => {
-      console.log(btn);
-
       document.querySelector('section').style.display = 'none';
       popUp.style.display = 'block';
       const popupBg = document.createElement('div');
