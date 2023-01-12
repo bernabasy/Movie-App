@@ -1,7 +1,9 @@
 :root {
   --primary: #fc466b;
   --light: #eee;
+  --lighter: #fff;
   --dark: #313154;
+  --darker: #000;
   --danger: #c9d3fd;
   --grey: #888;
   --shadow: 0 1px 3px rgba(211, 0, 0, 0.027);
@@ -37,14 +39,58 @@ a {
   color: var(--light);
 }
 
+.homepage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  padding: 1.5% 0;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-like-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1% 16%;
+}
+
+.likes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 1.3%;
+}
+
+.comment-btn-container {
+  margin: 1% 16%;
+  display: flex;
+}
+
+.comment-btn {
+  padding: 3%;
+  width: 100%;
+}
+
+.popup {
+  display: none;
+}
+
 footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
   padding: 1.8%;
   background-color: var(--dark);
   color: var(--light);
