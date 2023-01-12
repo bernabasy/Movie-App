@@ -1,8 +1,7 @@
 import './style.css';
 import logos from './images/logo.png';
-import displayMovies from './modules/homepage.js';
-
 const logoimg = document.querySelector('#logo');
 logoimg.src = logos;
+import showPopups from './modules/homepage.js';
 
-window.addEventListener('load', displayMovies);
+showPopups();
