@@ -1,6 +1,7 @@
 import displayMovies from './homepage.js';
 import pullComments from './pullcomments.js';
 import { fetchSeries } from './baseUrl.js';
+import AddComment from './addComment.js';
 
 const showPopups = async () => {
   await displayMovies();
@@ -137,17 +138,26 @@ const showPopups = async () => {
         const allComments = await pullComments(i);
         allComments.forEach((comment) => {
             if (comment.username != '[object Object]' && comment.comment != '[object Object]') {  // eslint-disable-line
-            const cmSec = document.querySelector('.title-comments');
+            const commentD = document.querySelector('.title-comments');
             const div = document.createElement('div');
             div.classList.add('display');
-            div.innerHTML = `<div class="cmin"><p>${comment.creation_date}</p><p class="usr">${comment.username} : </p><p>${comment.comment}</p></div>`;
-            cmSec.appendChild(div);
+            div.innerHTML = `<div><p>${comment.creation_date}</p><p>${comment.username} : </p><p>${comment.comment}</p></div>`;
+            commentD.appendChild(div);
           }
         });
 
         //   count
       };
       // add
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const username = document.querySelector('.form-input').value;
+        const comment = document.querySelector('.form-textarea').value;
+        await AddComment(i, username, comment);
+        document.querySelector('.title-comments').innerHTML = '';
+        await showComments();
+        form.reset();
+      });
       showComments();
     });
   });
