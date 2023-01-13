@@ -92,6 +92,9 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
   padding: 1.8%;
   background-color: var(--dark);
   color: var(--light);
@@ -166,4 +169,11 @@ form,
   display: flex;
   flex-direction: row;
   gap: 10px;
+}
+
+#contacts {
+  padding-left: 100px;
+  padding-top: 100px;
+  width: 500px;
+  height: 50px;
 }
