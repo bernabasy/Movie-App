@@ -1,4 +1,5 @@
 import { fetchSeries, fetchLikes, postLike } from './baseUrl.js';
+import displayMovieCounter from './homepageCounter.js';
 
 const movieContainer = document.getElementById('home');
 
@@ -37,6 +38,7 @@ const displayMovies = async () => {
           </div> 
         `;
     movieContainer.appendChild(card);
+    displayMovieCounter();
   });
 };
 
