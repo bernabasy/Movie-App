@@ -120,8 +120,16 @@ footer {
   color: #fc466b;
 }
 
+.popup-summary h2 {
+  padding-top: 20px;
+  width: 20%;
+  padding-inline: 40%;
+  font-size: 2.5vh;
+  font-weight: 600;
+}
+
 .popup-summary {
-  font-size: 1.6vh;
+  font-size: 1.8vh;
 }
 
 form,
@@ -137,12 +145,19 @@ form,
 
 .title-comments {
   display: flex;
+  flex-direction: column;
   margin-inline: auto;
+  width: 20%;
   gap: 10px;
-  font-size: 1.8vh;
+  font-size: 2vh;
+  margin-bottom: 10px;
 }
 
 .commentbtn-class {
   padding-inline: 10%;
   padding-block: 10px;
+}
+
+.form-textarea {
+  height: 5%;
 }

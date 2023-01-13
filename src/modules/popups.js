@@ -2,6 +2,7 @@ import displayMovies from './homepage.js';
 import pullComments from './pullcomments.js';
 import { fetchSeries } from './baseUrl.js';
 import AddComment from './addComment.js';
+import commentsCounter from './displayComents.js';
 
 const showPopups = async () => {
   await displayMovies();
@@ -107,7 +108,7 @@ const showPopups = async () => {
       form.classList.add('form');
       form.setAttribute('action', '#');
       form.setAttribute('method', 'get');
-      form.setAttribute('height', '10');
+      form.setAttribute('height', '20');
       addComment.appendChild(form);
 
       const input = document.createElement('input');
@@ -122,9 +123,9 @@ const showPopups = async () => {
 
       const textarea = document.createElement('textarea');
       textarea.classList.add('form-textarea');
-      textarea.setAttribute('placeholder', 'Your insights');
+      textarea.setAttribute('placeholder', 'Add comment');
       textarea.setAttribute('aria-label', 'message');
-      textarea.rows = '1';
+      // textarea.rows = '1';
       textarea.setAttribute('required', 'required');
       form.appendChild(textarea);
 
@@ -145,10 +146,9 @@ const showPopups = async () => {
             commentD.appendChild(div);
           }
         });
-
-        //   count
+        const counts = document.querySelectorAll('.display');
+        commentsCounter(counts);
       };
-      // add
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const username = document.querySelector('.form-input').value;
