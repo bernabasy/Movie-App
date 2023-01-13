@@ -120,7 +120,7 @@ footer {
   color: #fc466b;
 }
 
-.popup-summary h2 {
+.commentCounterPlaceHolder h2 {
   padding-top: 20px;
   width: 20%;
   padding-inline: 40%;
@@ -147,7 +147,7 @@ form,
   display: flex;
   flex-direction: column;
   margin-inline: auto;
-  width: 20%;
+  width: 50%;
   gap: 10px;
   font-size: 2vh;
   margin-bottom: 10px;
@@ -160,4 +160,10 @@ form,
 
 .form-textarea {
   height: 5%;
+}
+
+.display div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
