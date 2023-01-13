@@ -94,7 +94,6 @@ footer {
   justify-content: center;
   bottom: 0;
   width: 100%;
-  position: fixed;
   padding: 1.8%;
   background-color: var(--dark);
   color: var(--light);
@@ -176,4 +175,5 @@ form,
   padding-top: 100px;
   width: 500px;
   height: 50px;
+  margin-bottom: 500px;
 }
