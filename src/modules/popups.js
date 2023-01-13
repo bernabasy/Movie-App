@@ -64,7 +64,7 @@ const showPopups = async () => {
       popupInfo.appendChild(popupSummary);
 
       const commentCounterPlace = document.createElement('p');
-      commentCounterPlace.classList.add("commentCounterPlaceHolder");
+      commentCounterPlace.classList.add('commentCounterPlaceHolder');
       popupInfo.appendChild(commentCounterPlace);
 
       const popupMoreInfo = document.createElement('div');
