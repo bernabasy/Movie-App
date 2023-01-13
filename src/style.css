@@ -83,6 +83,11 @@ a {
   width: 100%;
 }
 
+.fa-heart:hover {
+  color: var(--primary);
+  font-size: larger;
+}
+
 footer {
   display: flex;
   align-items: center;
