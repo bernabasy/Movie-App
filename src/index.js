@@ -10,12 +10,15 @@ showPopups();
 const about = document.querySelector('#about');
 const home = document.querySelector('#homes');
 
-home.addEventListener('click', () => {
-  const main = document.querySelector('#main');
-  const contact = document.querySelector('#contacts');
-  contact.style.display = 'none';
-  main.style.display = 'grid';
-});
+const onload = () => {
+    const main = document.querySelector('#main');
+    const contact = document.querySelector('#contacts');
+    contact.style.display = 'none';
+    main.style.display = 'grid';
+}
+
+window.addEventListener('load', onload);
+home.addEventListener('click', onload)
 
 about.addEventListener('click', () => {
   const main = document.querySelector('#main');
