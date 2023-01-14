@@ -1,0 +1,185 @@
+:root {
+  --primary: #fc466b;
+  --light: #eee;
+  --lighter: #fff;
+  --dark: #313154;
+  --darker: #000;
+  --danger: #c9d3fd;
+  --grey: #888;
+  --shadow: 0 1px 3px rgba(211, 0, 0, 0.027);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.display-flex {
+  display: flex;
+}
+
+nav {
+  background-color: var(--dark);
+  font-size: 2vw;
+  justify-content: space-between;
+  padding-inline: 5%;
+}
+
+.leftHeader,
+ul {
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  color: var(--light);
+  gap: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light);
+}
+
+.counter-wrapper {
+  text-decoration: underline;
+}
+
+.homepage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  padding: 1.5% 0;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-like-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1% 16%;
+}
+
+.likes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 1.3%;
+}
+
+.comment-btn-container {
+  margin: 1% 16%;
+  display: flex;
+}
+
+.comment-btn {
+  padding: 3%;
+  width: 100%;
+}
+
+.fa-heart:hover {
+  color: var(--primary);
+  font-size: larger;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  padding: 1.8%;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.popup {
+  padding-inline: 2%;
+  padding-top: 10px;
+}
+
+.tittle-popup {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  padding-inline: 5%;
+}
+
+.popup-img {
+  width: 100%;
+  height: auto;
+  padding-inline: 20%;
+}
+
+.genres {
+  padding: 20px;
+  color: #fc466b;
+}
+
+.commentCounterPlaceHolder h2 {
+  padding-top: 20px;
+  width: 20%;
+  padding-inline: 40%;
+  font-size: 2.5vh;
+  font-weight: 600;
+}
+
+.popup-summary {
+  font-size: 1.8vh;
+}
+
+form,
+.add-comment-title {
+  display: flex;
+  padding-bottom: 10px;
+  flex-direction: column;
+  width: 50%;
+  margin-inline: auto;
+}
+
+/* styles for comment */
+
+.title-comments {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  width: 50%;
+  gap: 10px;
+  font-size: 2vh;
+  margin-bottom: 10px;
+}
+
+.commentbtn-class {
+  padding-inline: 10%;
+  padding-block: 10px;
+}
+
+.form-textarea {
+  height: 5%;
+}
+
+.display div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+#contacts {
+  padding-left: 100px;
+  padding-top: 100px;
+  width: 500px;
+  height: 50px;
+  margin-bottom: 500px;
+}
