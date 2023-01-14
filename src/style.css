@@ -16,17 +16,19 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.display-flex {
+  display: flex;
+}
+
 nav {
   background-color: var(--dark);
   font-size: 2vw;
-  display: flex;
   justify-content: space-between;
   padding-inline: 5%;
 }
 
 .leftHeader,
 ul {
-  display: flex;
   align-items: center;
   text-decoration: none;
   list-style: none;
@@ -37,6 +39,10 @@ ul {
 a {
   text-decoration: none;
   color: var(--light);
+}
+
+.counter-wrapper {
+  text-decoration: underline;
 }
 
 .homepage {
